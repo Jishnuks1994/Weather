@@ -74,7 +74,7 @@
     weatherData = (data) => {
         data = data
         console.log(data);
-        temp.innerHTML = `<h2> ${data.main.temp}℃,</h2><p>${data.weather[0].description}</p><p>feels like ${data.main.feels_like}℃</p>`
+        temp.innerHTML = `<h2> ${eval(data.main.temp-273.15).toFixed()}℃,</h2><p>${data.weather[0].description}</p><p>feels like ${eval(data.main.feels_like-273.15).toFixed()}℃</p>`
         cName.innerHTML = `${data.name}`
         date.innerHTML= `<p>${Date()}</p>`
         Country.innerHTML = `${data.sys.country}`
